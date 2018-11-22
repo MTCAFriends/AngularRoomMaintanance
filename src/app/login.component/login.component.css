@@ -1,0 +1,42 @@
+
+
+body{
+    text-align: center;
+    background-color:;
+}   
+h2{
+    text-align: center;
+    color:;
+}
+.form-control{
+    height:35px;
+	box-shadow:none;
+    color:#969fa4;
+    
+}
+form{
+    color: #999;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    background: #f2f3f7;
+    
+    padding: 30px;
+}
+label{
+    font-size:15px;
+}
+.input-group-addon{
+    background-color:white;
+
+}
+.panel{
+    padding:10px;
+}
+.glyphicon-eye-open{
+    border-left:0px;
+}
+[type="password"], [type="text"]{
+    border-right:0px;
+}
+    
