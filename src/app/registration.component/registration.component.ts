@@ -6,8 +6,10 @@
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent implements OnInit {
-
+  
   constructor() { }
+
+  genderList:string[]=['Male','Female','Other'];
 
   ngOnInit() {
   }

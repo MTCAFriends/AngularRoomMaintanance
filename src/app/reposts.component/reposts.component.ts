@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-//import{ProformaComponent} from '../proforma.component/proforma.component';
+import{ FormBuilder, FormGroup, Validators} from '@angular/forms';
+
 
 @Component({
   selector: 'app-reposts',
