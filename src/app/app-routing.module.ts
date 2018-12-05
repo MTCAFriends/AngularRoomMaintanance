@@ -11,6 +11,7 @@ const routes: Routes = [
   {path:"", component:LoginComponent},
   {path:"registration", component:RegistrationComponent},
   {path:"forgotpwd", component:ForgotpwdComponent},
+  {path:"login", component:LoginComponent},
   {path:"proforma", component:ProformaComponent},
   {path:"reports", component:RepostsComponent},
 
