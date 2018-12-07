@@ -1,5 +1,5 @@
-	import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+  import { Component, OnInit } from '@angular/core';
+  //import { FormGroup, FormBuilder,Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-registration',
@@ -8,25 +8,28 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 })
 export class RegistrationComponent implements OnInit {
 
-    regForm:FormGroup;
-  constructor(private fb:FormBuilder) { 
-    this.regForm=this.fb.group({
-      name:'',
-      sname:'',
-      dob:'',
-      gender:'',
-      emailCtrl:'',
-      pwd:'',
-      conpwd:'',
-      mobile:'',
-      aadhar:'',
+  addUser(regForm){
+    console.log(regForm.value);
+  }
+    
+  constructor() { 
+    // this.regForm=this.fb.group({
+    //   name:['',[Validators.required,Validators.minLength(2),Validators.maxLength(10)]],
+    //   sname:['',[Validators.required,Validators.minLength(2),Validators.maxLength(10)]],
+    //   dob:'',
+    //   gender:'',
+    //   emailCtrl:'',
+    //   pwd:'',
+    //   conpwd:'',
+    //   mobile:'',
+    //   aadhar:'',
 
-    })
+    // })
 
   }
-  onSubmit(){
-    console.log(this.regForm.value);
-  }
+  // onSubmit(){
+  //   console.log(this.regForm.value);
+  // }
   genderList:string[]=['Male','Female','Other'];
 
   ngOnInit() {
