@@ -2,7 +2,7 @@
 
   <body>
     <div class=" col-md-6 col-md-offset-3">
-      <form>
+      <form [formGroup]="loginForm" (onSubmit)="login(loginForm)">
       <div class="panel panel-primary">
         <div class="panel-heading"><h2>Login Here</h2></div>
           <div class="panel-body">
@@ -12,8 +12,16 @@
                       <div class="col-md-6 col-md-offset-3">
                           <div class="input-group">
                               <span class="input-group-addon"><a href="#"><i class="glyphicon glyphicon-user"></i></a></span>
-                          <input type="email" class="form-control" placeholder="Enter E-mail">
+                          <input type="email" formControlName="email" class="form-control" placeholder="Enter E-mail">
+                        </div>
+                        <div *ngIf="loginForm.get('email').touched && loginForm.get('email').invalid" class="alert alert-danger" >
+                          <div *ngIf="loginForm.get('email').hasError('required')" >
+                              Email required
+                          </div>  
+                          <div *ngIf="loginForm.get('email').hasError('email')" >
+                              Invalid email
                           </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -22,9 +30,14 @@
                         <div class="col-md-6 col-md-offset-3">
                             <div class="input-group">
                                 <span class="input-group-addon"><a href="#"><i class="glyphicon glyphicon-lock"></i></a></span>
-                            <input type={{type}} id="pwd" class="form-control" placeholder="Enter Password">
+                            <input type={{type}} id="pwd" formControlName="pswd" class="form-control" placeholder="Enter Password">
                             <span class="input-group-addon"><a href="#"><i id="eye"class="glyphicon glyphicon-eye-open" (click)="toggleShow()"></i></a></span>
                             </div>
+                            <div *ngIf="loginForm.get('pswd').touched && loginForm.get('pswd').invalid" class="alert alert-danger" >
+                              <div *ngIf="loginForm.get('pswd').hasError('required')" >
+                                  Password required
+                              </div>
+                          </div>
                         </div>
                       </div>
                   </div>
