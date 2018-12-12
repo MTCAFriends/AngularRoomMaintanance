@@ -1,0 +1,34 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+
+    </div>
+    <ul class="nav navbar-nav">
+      <li  class="active"><a  [routerLink]="['/home',{outlets: {'master': ['/proforma']}}]">Proforma</a></li>
+      <li  class=""><a  [routerLink]="['/home',{outlets: {'master': ['/Reports']}}]">Reports</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <div class="dropdown pull-right" id="">
+        <img  src="./app/images/Deva.jpg" alt="userImg" height="60px" width="60px" class="img-circle dropdown-toggle" type="button"  data-toggle="dropdown">
+        <span class="caret"></span>
+        <ul class="dropdown-menu">
+           <div class="bg-primary" > <li class="dropdown-header "></li>
+              <li class="text-center"><a href="#">
+                <img  src="./app/images/Deva.jpg"  alt="userImg" height="60px" width="60px" class="img-circle center"></a></li>
+              <li><p class="text-center">Deva - Web Developer</p></li>
+              <li class="dropdown-body"></li>
+              <li class="divider"></li>
+            </div>
+       <li class="divider"></li>
+       <li class="dropdown-footer">
+        <button class="pull-left btn btn-primary"[routerLink]="['/registration']" >Add Account</button>
+        <button class="pull-right btn btn-primary" [routerLink]="['/login']">Logout</button>
+       </li>
+        </ul>
+      </div>
+    </ul>
+  </div>
+</nav>
+<div>
+  <router-outlet name="master"></router-outlet>
+</div>

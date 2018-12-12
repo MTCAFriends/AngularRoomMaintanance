@@ -6,17 +6,24 @@ import {RegistrationComponent} from './registration.component/registration.compo
 import { LoginComponent } from './login.component/login.component';
 import { ProformaComponent } from './proforma.component/proforma.component';
 import { RepostsComponent } from './reposts.component/reposts.component';
+import { HomeComponent } from './home.component/home.component';
+
 
 const routes: Routes = [
-  {path:"", component:LoginComponent},
+  {path:"login", component:LoginComponent},
+  // {path:"", component:LoginComponent},
+  {path:"", redirectTo:'login', pathMatch:'full'},
   {path:"registration", component:RegistrationComponent},
   {path:"forgotpwd", component:ForgotpwdComponent},
-  {path:"login", component:LoginComponent},
-  {path:"proforma", component:ProformaComponent},
-  {path:"reports", component:RepostsComponent},
-
-
-];
+  {path:"home", component:HomeComponent,
+   children:[
+              //{path:"", redirectTo:'proforma', pathMatch:'full'},
+              {path:"proforma", component:ProformaComponent, outlet:'master'},
+              {path:"reports", component:RepostsComponent, outlet:'master'},
+            ]
+  },
+  
+  ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

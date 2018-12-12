@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import{ReactiveFormsModule,FormsModule} from '@angular/forms';
+import {ReactiveFormsModule,FormsModule} from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { fromEventPattern } from 'rxjs';
 
 
 
@@ -10,9 +11,9 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login.component/login.component';
 import { RegistrationComponent } from './registration.component/registration.component';
 import { ForgotpwdComponent } from './forgotpwd.component/forgotpwd.component';
+import { HomeComponent } from './home.component/home.component';
 import { ProformaComponent } from './proforma.component/proforma.component';
 import { RepostsComponent } from './reposts.component/reposts.component';
-import { fromEventPattern } from 'rxjs';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { fromEventPattern } from 'rxjs';
     ForgotpwdComponent,
     ProformaComponent,
     RepostsComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
