@@ -16,13 +16,14 @@ const routes: Routes = [
   {path:"registration", component:RegistrationComponent},
   {path:"forgotpwd", component:ForgotpwdComponent},
   {path:"home", component:HomeComponent,
-   children:[
-              //{path:"", redirectTo:'proforma', pathMatch:'full'},
-              {path:"proforma", component:ProformaComponent, outlet:'master'},
-              {path:"reports", component:RepostsComponent, outlet:'master'},
-            ]
+  //  children:[
+  //             {path:"", redirectTo:'proforma', pathMatch:'full'},
+  //             {path:"proforma", component:ProformaComponent},
+  //             {path:"reports", component:RepostsComponent},
+  //           ]
   },
-  
+  {path:"proforma", component:ProformaComponent},
+  {path:"reports", component:RepostsComponent}
   ];
 
 @NgModule({

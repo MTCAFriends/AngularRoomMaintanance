@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  photo:string="./app/images/Deva.jpg";
+  photo:string="../app/images/Deva.jpg";
   constructor() { }
 
   ngOnInit() {

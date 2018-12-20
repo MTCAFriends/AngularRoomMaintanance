@@ -4,17 +4,17 @@
 
     </div>
     <ul class="nav navbar-nav">
-      <li  class="active"><a  [routerLink]="['/home',{outlets: {'master': ['/proforma']}}]">Proforma</a></li>
-      <li  class=""><a  [routerLink]="['/home',{outlets: {'master': ['/Reports']}}]">Reports</a></li>
+      <li  class="active"><a  [routerLink]="['/proforma']">Proforma</a></li>
+      <li  class=""><a  [routerLink]="['/Reports']">Reports</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <div class="dropdown pull-right" id="">
-        <img  src="./app/images/Deva.jpg" alt="userImg" height="60px" width="60px" class="img-circle dropdown-toggle" type="button"  data-toggle="dropdown">
+        <img  src="./images/Deva.jpg" alt="userImg" height="60px" width="60px" class="img-circle dropdown-toggle" type="button"  data-toggle="dropdown">
         <span class="caret"></span>
         <ul class="dropdown-menu">
            <div class="bg-primary" > <li class="dropdown-header "></li>
               <li class="text-center"><a href="#">
-                <img  src="./app/images/Deva.jpg"  alt="userImg" height="60px" width="60px" class="img-circle center"></a></li>
+                <img  src="./images/Deva.jpg"  alt="userImg" height="60px" width="60px" class="img-circle center"></a></li>
               <li><p class="text-center">Deva - Web Developer</p></li>
               <li class="dropdown-body"></li>
               <li class="divider"></li>
@@ -31,4 +31,5 @@
 </nav>
 <div>
   <router-outlet name="master"></router-outlet>
+  <router-outlet name="master2"></router-outlet>
 </div>

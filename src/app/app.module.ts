@@ -14,6 +14,7 @@ import { ForgotpwdComponent } from './forgotpwd.component/forgotpwd.component';
 import { HomeComponent } from './home.component/home.component';
 import { ProformaComponent } from './proforma.component/proforma.component';
 import { RepostsComponent } from './reposts.component/reposts.component';
+import { ViewComponent } from './view/view.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { RepostsComponent } from './reposts.component/reposts.component';
     ProformaComponent,
     RepostsComponent,
     HomeComponent,
+    ViewComponent,
   ],
   imports: [
     BrowserModule,
