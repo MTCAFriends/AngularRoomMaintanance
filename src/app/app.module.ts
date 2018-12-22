@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {ReactiveFormsModule,FormsModule} from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { fromEventPattern } from 'rxjs';
+import {HttpModule} from '@angular/http';
 
 
 
@@ -23,9 +23,9 @@ import { ViewComponent } from './view/view.component';
     LoginComponent,
     RegistrationComponent,
     ForgotpwdComponent,
+    HomeComponent,
     ProformaComponent,
     RepostsComponent,
-    HomeComponent,
     ViewComponent,
   ],
   imports: [
@@ -33,6 +33,7 @@ import { ViewComponent } from './view/view.component';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,RouterModule,
+    HttpModule,
     ],
 
   providers: [],
