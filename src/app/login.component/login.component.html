@@ -31,7 +31,7 @@
                             <div class="input-group">
                                 <span class="input-group-addon"><a href="#"><i class="glyphicon glyphicon-lock"></i></a></span>
                             <input type={{type}} id="pwd" formControlName="pswd" class="form-control" placeholder="Enter Password">
-                            <span class="input-group-addon"><a href="#"><i id="eye"class="glyphicon glyphicon-eye-open" (click)="toggleShow()"></i></a></span>
+                            <span class="input-group-addon"><a ><i id="eye"class="glyphicon glyphicon-eye-open" (click)="toggleShow()"></i></a></span>
                             </div>
                             <div *ngIf="loginForm.get('pswd').touched && loginForm.get('pswd').invalid" class="alert alert-danger" >
                               <div *ngIf="loginForm.get('pswd').hasError('required')" >

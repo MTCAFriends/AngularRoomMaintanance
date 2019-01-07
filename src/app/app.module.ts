@@ -15,6 +15,8 @@ import { HomeComponent } from './home.component/home.component';
 import { ProformaComponent } from './proforma.component/proforma.component';
 import { RepostsComponent } from './reposts.component/reposts.component';
 import { ViewComponent } from './view/view.component';
+import { NotfoundpageComponent } from './notfoundpage/notfoundpage.component';
+import { RegistersUsersService } from './registers-users.service';
 
 
 @NgModule({
@@ -27,6 +29,7 @@ import { ViewComponent } from './view/view.component';
     ProformaComponent,
     RepostsComponent,
     ViewComponent,
+    NotfoundpageComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,7 @@ import { ViewComponent } from './view/view.component';
     HttpModule,
     ],
 
-  providers: [],
+  providers: [RegistersUsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

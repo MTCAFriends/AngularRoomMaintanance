@@ -7,23 +7,26 @@ import { LoginComponent } from './login.component/login.component';
 import { ProformaComponent } from './proforma.component/proforma.component';
 import { RepostsComponent } from './reposts.component/reposts.component';
 import { HomeComponent } from './home.component/home.component';
+import { NotfoundpageComponent } from './notfoundpage/notfoundpage.component';
+
 
 
 const routes: Routes = [
   {path:"login", component:LoginComponent},
   // {path:"", component:LoginComponent},
-  {path:"", redirectTo:'login', pathMatch:'full'},
   {path:"registration", component:RegistrationComponent},
   {path:"forgotpwd", component:ForgotpwdComponent},
   {path:"home", component:HomeComponent,
    children:[
               {path:"", redirectTo:'proforma', pathMatch:'full'},
-              {path:"proforma", component:ProformaComponent},
-              {path:"reports", component:RepostsComponent},
+              {path:"proforma", component:ProformaComponent,outlet:'child1'},
+              {path:"reports", component:RepostsComponent,outlet:'child2'},
             ]
   },
-  // {path:"proforma", component:ProformaComponent},
-  // {path:"reports", component:RepostsComponent}
+  {path:"", redirectTo:'login', pathMatch:'full'},
+  {path:"**", component:NotfoundpageComponent},
+  //  {path:"proforma", component:ProformaComponent},
+  //  {path:"reports", component:RepostsComponent}
   ];
 
 @NgModule({

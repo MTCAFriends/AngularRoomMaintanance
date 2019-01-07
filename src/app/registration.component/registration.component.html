@@ -202,7 +202,7 @@
                     <div class="form-group">
                         <div class="row">
                             <div class=" col-md-4">
-                                <button class="btn btn-md btn-warning">Reset</button>
+                                <button class="btn btn-md btn-warning" id="btn1" (click)="resetForm()">Reset</button>
                             </div>
                             <div class="col-md-4">
                                 <button type="submit" class="btn btn-md btn-success"(click)="addUser(regForm)">Register</button>
@@ -216,7 +216,7 @@
               </div>
               {{regForm.value | json}}
         </form>
-        <app-view [parentText]="name"></app-view>
+        <!-- <app-view [parentText]="name"></app-view> -->
     </div>
 </body>
     

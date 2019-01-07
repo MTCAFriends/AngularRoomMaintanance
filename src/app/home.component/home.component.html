@@ -4,8 +4,8 @@
 
     </div>
     <ul class="nav navbar-nav">
-      <li  class="active"><a  [routerLink]="['/proforma']">Proforma</a></li>
-      <li  class=""><a  [routerLink]="['/Reports']">Reports</a></li>
+      <li  class="active"><a [routerLink]="['proforma']">Proforma</a></li>
+      <li  class=""><a  [routerLink]="['reports']">Reports</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <div class="dropdown pull-right" id="">
@@ -30,6 +30,7 @@
   </div>
 </nav>
 <div>
-  <router-outlet name="master"></router-outlet>
-  <router-outlet name="master2"></router-outlet>
+   
+  <!-- <router-outlet name="child1"></router-outlet>
+  <router-outlet name="child2"></router-outlet> -->
 </div>
