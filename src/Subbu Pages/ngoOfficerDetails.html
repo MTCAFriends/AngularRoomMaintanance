@@ -1,0 +1,79 @@
+<!-- When admin click on ngo’s -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NGO OfficerDetails</title>
+    <style>
+        table{
+            margin-left:30%;
+            margin-top:10px;
+            border:1px solid rgb(189, 189, 240);
+            background-color:lightblue ;
+        }
+        td{
+            padding:10px;
+        
+        }
+        
+        
+    </style>
+    </head>
+<body>
+      <form autocomplete="off">
+                <table >
+                        <tr>
+                              <th><h2>NGO's Officer Details</h2></th>
+                        </tr>
+                        <tr>
+                            <td>NGO Officer ID:</td>
+                            <td><input type="text" name="ngoid" class="form-control"></td>
+                        </tr>
+                        <tr>
+                                <td>UserName:</td>
+                                <td><input type="text" name="userName" class="form-control"></td>
+                         </tr>
+                         <tr>
+                                <td>Password:</td>
+                                <td><input type="password" name="pwd" class="form-control"></td>
+                        </tr>
+                        <tr>
+                                <td>Conform Password:</td>
+                                <td><input type="password" name="cnfpwd" class="form-control"></td>
+                         </tr>
+                         <tr>
+                                <td>Gender</td>
+                                <td>
+                                    <input type="radio" name="gender" class="form-control">Male
+                                    <input type="radio" name="gender" class="form-control">Female
+                                </td>
+                        </tr>
+                        <tr>
+                                <td>Address</td>
+                                <td><textarea></textarea></td>
+                        </tr>
+                        <tr>
+                                <td>Email:</td>
+                                <td><input type="text" name="email" class="form-control"></td>
+                        </tr>
+                        <tr>
+                                <td>Mobile:</td>
+                                <td><input type="text" name="mobile" class="form-control"></td>
+                        </tr>
+                        <tr>
+                                <td>Approval</td>
+                                <td><select>
+                                    <option>...ApprovalStatus...</option>
+                                    <option>Approved</option>
+                                    <option>DisApproved</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <td></td><td><button type="reset">Clear</button>
+                            <button type="submit">Register</button></td>
+                              
+                        </tr>
+                    </table>
+          
+      </form>     
+ </body>        
+</html>

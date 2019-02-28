@@ -22,7 +22,7 @@ export class RegistrationComponent implements OnInit {
    addUser(regForm){
     if(regForm.valid)
     {
-     console.log(regForm.value);
+    // console.log(regForm.value);
     //  var headers = new Headers();
     //   headers.append('Content-Type', 'image/jpeg');
        let data={
@@ -42,7 +42,7 @@ export class RegistrationComponent implements OnInit {
           (err)=>{console.log("Error");}
         }
         );
-        console.log("data="+data);
+        console.log();
      regForm.reset();
       
        }

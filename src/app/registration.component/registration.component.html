@@ -8,7 +8,7 @@
                     <div class="form-group" >
                         <div class="row">
                             <div class="col-md-6" >
-                                <input type="text" [(ngModel)]="name" formControlName="name"  pattern="[a-zA-Z][a-zA-Z]+" class="form-control" placeholder="Enter Name" required>
+                                <input type="text" formControlName="name"  pattern="[a-zA-Z][a-zA-Z]+" class="form-control" placeholder="Enter Name" required>
                                 <div *ngIf="regForm.get('name').touched && regForm.get('name').invalid" class="alert alert-danger" >
                                     <div *ngIf="regForm.get('name').hasError('required')" >
                                         Name is required
@@ -19,7 +19,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <input type="text" [(ngModel)]="sname" formControlName="sname"  pattern="[a-zA-Z][a-zA-Z]+" class="form-control" placeholder="Enter Surname" required>
+                                <input type="text" formControlName="sname"  pattern="[a-zA-Z][a-zA-Z]+" class="form-control" placeholder="Enter Surname" required>
                                 <div>
                                     <div *ngIf="regForm.get('sname').touched && regForm.get('sname').invalid" class="alert alert-danger" >
                                         <div *ngIf="regForm.get('sname').hasError('required')" >
@@ -37,7 +37,7 @@
                         <div class="row ">
                                 <label class="col-md-2">D O B</label>
                                 <div class="col-md-4">
-                                     <input type="date"[(ngModel)]="dob" formControlName="dob" class="form-control"required>
+                                     <input type="date" formControlName="dob" class="form-control"required>
                                      <div *ngIf="regForm.get('dob').touched && regForm.get('dob').invalid" class="alert alert-danger" >
                                         <div *ngIf="regForm.get('dob').hasError('required')" >
                                             DOB is required
@@ -51,11 +51,11 @@
                                    <div class="row">
                                     <label class="col-md-3" >Male</label>
                                     <div class="col-md-3">
-                                        <input type="radio"  name="gender" [(ngModel)]="gender" formControlName="gender" value="male">
+                                        <input type="radio"  name="gender" formControlName="gender" value="male">
                                     </div>
                                     <label class="col-md-3">Female</label>
                                     <div class="col-md-3">
-                                        <input type="radio" name="gender" [(ngModel)]="gender" formControlName="gender" value="female">
+                                        <input type="radio" name="gender" formControlName="gender" value="female">
                                     </div>
                                    </div>
                                    <div *ngIf="regForm.get('gender').touched && regForm.get('gender').invalid" class="alert alert-danger" >
@@ -85,9 +85,9 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-6 ">
-                                    <div class="input-group">
+                                    <div    class="input-group">
                                             <span class="input-group-addon"><a href="#"><i class="glyphicon glyphicon-envelope"></i></a></span>
-                                            <input type="email" id="email" [(ngModel)]="email" formControlName="email" class="form-control" placeholder="Email ID" required>
+                                            <input type="email" id="email" formControlName="email" class="form-control" placeholder="Email ID" required>
                                     </div>
                                     <div *ngIf="regForm.get('email').touched && regForm.get('email').invalid" class="alert alert-danger" >
                                         <div *ngIf="regForm.get('email').hasError('required')" >
@@ -101,7 +101,7 @@
                             <div class="col-md-6 ">
                                         <div class="input-group">
                                             <span class="input-group-addon"><a href="#"><i class="glyphicon glyphicon-lock"></i></a></span>
-                                            <input type="password" id="pwd" [(ngModel)]="pwd" formControlName="pwd" class="form-control" placeholder="Password"  required>
+                                            <input type="password" id="pwd" formControlName="pwd" class="form-control" placeholder="Password"  required>
                                         </div>
                                         <div *ngIf="regForm.get('pwd').touched && regForm.get('pwd').invalid" class="alert alert-danger" >
                                             <div *ngIf="regForm.get('pwd').hasError('required')" >
@@ -116,7 +116,7 @@
                             <div class="col-md-6">
                                 <div class="input-group">
                                     <span class="input-group-addon"><a href="#"><i class="glyphicon glyphicon-lock"></i></a></span>
-                                    <input type="password" id="cnfpass" [(ngModel)]="cnfpass" formControlName="cnfpass" class="form-control" placeholder="Re-enter password"  required>
+                                    <input type="password" id="cnfpass" formControlName="cnfpass" class="form-control" placeholder="Re-enter password"  required>
                                 </div>
                                 <div *ngIf="regForm.get('cnfpass').touched && regForm.get('cnfpass').invalid" class="alert alert-danger" >
                                     <div *ngIf="regForm.get('cnfpass').hasError('required')" >
@@ -127,7 +127,7 @@
                             <div class="col-md-6 ">
                                 <div class="input-group">
                                     <span class="input-group-addon"><a href="#"><i class="glyphicon glyphicon-phone"></i></a></span>
-                                    <input type="text" id="mobile" [(ngModel)]="mobile" formControlName="mobile" maxlength="10"
+                                    <input type="text" id="mobile" formControlName="mobile" maxlength="10"
                                             class="form-control" placeholder="Enter Mobile Number"  required>
                                 </div>
                                 <div *ngIf="regForm.get('mobile').touched && regForm.get('mobile').invalid" class="alert alert-danger" >
@@ -146,7 +146,7 @@
                             <div class="col-md-6 ">
                                     <div class="input-group">
                                         <span class="input-group-addon"><a href="#"><i class="glyphicon glyphicon-user"></i></a></span>
-                                        <input type="text" [(ngModel)]="aadhar" formControlName="aadhar" class="form-control" placeholder="Enter Aadhaar Number" required>
+                                        <input type="text" formControlName="aadhar" class="form-control" placeholder="Enter Aadhaar Number" required>
                                     </div>
                                     <div *ngIf="regForm.get('aadhar').touched && regForm.get('aadhar').invalid" class="alert alert-danger" >
                                         <div *ngIf="regForm.get('aadhar').hasError('required')" >
@@ -160,7 +160,7 @@
                             <div class="col-md-6">
                                 <div class="input-group">
                                     <span class="input-group-addon"><a href="#"><i class="glyphicon glyphicon-pencil"></i></a></span>
-                                    <textarea class="form-control" [(ngModel)]="address" formControlName="address" placeholder="Address for Communication"></textarea>
+                                    <textarea class="form-control" formControlName="address" placeholder="Address for Communication"></textarea>
                                 </div>
                                 <div *ngIf="regForm.get('address').touched && regForm.get('address').invalid" class="alert alert-danger" >
                                     <div *ngIf="regForm.get('address').hasError('required')" >
@@ -202,7 +202,7 @@
                     <div class="form-group">
                         <div class="row">
                             <div class=" col-md-4">
-                                <button class="btn btn-md btn-warning" id="btn1" (click)="resetForm()">Reset</button>
+                                <button class="btn btn-md btn-warning" id="btn1">Reset</button>
                             </div>
                             <div class="col-md-4">
                                 <button type="submit" class="btn btn-md btn-success"(click)="addUser(regForm)">Register</button>

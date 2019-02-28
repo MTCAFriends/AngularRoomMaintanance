@@ -4,8 +4,7 @@ import {ReactiveFormsModule,FormsModule} from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import {HttpModule} from '@angular/http';
 
-
-
+//import {NewmoduleModule} from './newmodule/newmodule.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login.component/login.component';
@@ -17,6 +16,7 @@ import { RepostsComponent } from './reposts.component/reposts.component';
 import { ViewComponent } from './view/view.component';
 import { NotfoundpageComponent } from './notfoundpage/notfoundpage.component';
 import { RegistersUsersService } from './registers-users.service';
+import { SampledirectiveDirective } from './sampledirective.directive';
 
 
 @NgModule({
@@ -30,8 +30,10 @@ import { RegistersUsersService } from './registers-users.service';
     RepostsComponent,
     ViewComponent,
     NotfoundpageComponent,
+    SampledirectiveDirective,
   ],
   imports: [
+    //NewmoduleModule,
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
